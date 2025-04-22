@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkphxte5tho0d"]
+
+[ext_resource type="Theme" uid="uid://xwsq6n7r3hrb" path="res://assets/themes/dark_theme.tres" id="1_iirl0"]
+[ext_resource type="Texture2D" uid="uid://c0xcpju0542qm" path="res://assets/progress teexture/capsul frame.svg" id="1_lmy58"]
+[ext_resource type="Texture2D" uid="uid://c87dwgdp30pt0" path="res://assets/progress teexture/fulldark.png" id="1_lohwe"]
+[ext_resource type="Texture2D" uid="uid://d08v6rs6u5o5k" path="res://assets/progress teexture/capsulfull.svg" id="4_iirl0"]
+
+[node name="capsul_progress" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+offset_left = 586.0
+offset_top = 64.0
+offset_right = 711.005
+offset_bottom = 329.0
+scale = Vector2(1.31, 1.31)
+pivot_offset = Vector2(62.66, 0)
+theme = ExtResource("1_iirl0")
+value = 70.0
+fill_mode = 3
+texture_under = ExtResource("1_lohwe")
+texture_over = ExtResource("1_lmy58")
+texture_progress = ExtResource("4_iirl0")
+
+[node name="Label" type="Label" parent="TextureProgressBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.345
+anchor_top = 0.06
+anchor_right = 0.665
+anchor_bottom = 0.204
+offset_left = -0.0545006
+offset_top = 0.130534
+offset_right = -0.0560989
+offset_bottom = -0.0294685

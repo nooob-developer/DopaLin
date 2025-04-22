@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://74dl8o7dampi"]
+
+[ext_resource type="PackedScene" uid="uid://dsoggd73aueyi" path="res://scene/components/info_system.tscn" id="1_g1ymg"]
+
+[node name="storage_monitor" instance=ExtResource("1_g1ymg")]
+offset_left = 1047.0
+offset_right = 1824.0
+
+[node name="fetch_box" parent="." index="0"]
+layout_mode = 0

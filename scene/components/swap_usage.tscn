@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://nlkjwb5us51y"]
+
+[ext_resource type="PackedScene" uid="uid://bkphxte5tho0d" path="res://scene/components/capsul_progress.tscn" id="1_3tfjl"]
+[ext_resource type="Script" uid="uid://dxn5pfjbynipx" path="res://scripts/component_script/swap_usage.gd" id="2_wl4p0"]
+
+[node name="swap_usage" instance=ExtResource("1_3tfjl")]
+script = ExtResource("2_wl4p0")
+
+[node name="TextureProgressBar" parent="." index="0"]
+offset_left = 1668.0
+offset_top = 24.0
+offset_right = 1804.0
+offset_bottom = 289.0

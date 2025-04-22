@@ -1,0 +1,176 @@
+[gd_scene load_steps=15 format=3 uid="uid://cy2anoo3vru"]
+
+[ext_resource type="PackedScene" uid="uid://bkphxte5tho0d" path="res://scene/components/capsul_progress.tscn" id="1_sdkr6"]
+[ext_resource type="Script" uid="uid://batffjttpllhw" path="res://scripts/component_script/vramusage_capsul.gd" id="1_v2xvt"]
+[ext_resource type="Theme" uid="uid://xwsq6n7r3hrb" path="res://assets/themes/dark_theme.tres" id="1_varo5"]
+[ext_resource type="FontFile" uid="uid://cidvectj6geye" path="res://assets/fonts/Poppins-Bold.ttf" id="3_0o51a"]
+[ext_resource type="FontFile" uid="uid://bj42x8oo5gjq" path="res://assets/fonts/Poppins-Black.ttf" id="3_41ljr"]
+[ext_resource type="Script" uid="uid://ddyrwamjkdope" path="res://scripts/component_script/vram_capsul_progress.gd" id="5_6chov"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6chov"]
+font = ExtResource("3_41ljr")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_qxbxr"]
+font = ExtResource("3_41ljr")
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_dbl51"]
+font = ExtResource("3_41ljr")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_5m0ma"]
+font = ExtResource("3_41ljr")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_1pf4k"]
+font = ExtResource("3_41ljr")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_a24q4"]
+font = ExtResource("3_41ljr")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_0o51a"]
+font = ExtResource("3_0o51a")
+font_size = 27
+
+[sub_resource type="LabelSettings" id="LabelSettings_v2xvt"]
+font = ExtResource("3_0o51a")
+font_size = 28
+
+[node name="vramusage_capsul" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v2xvt")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 710.0
+offset_top = 72.0
+offset_right = 1033.0
+offset_bottom = 406.0
+theme = ExtResource("1_varo5")
+
+[node name="memory_freq" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 25.0
+offset_right = 234.0
+offset_bottom = 68.0
+text = "MEM freq"
+label_settings = SubResource("LabelSettings_6chov")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="m_freq" type="Label" parent="Panel/memory_freq"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.14
+anchor_right = 1.0
+anchor_bottom = 2.209
+offset_top = -0.0200043
+offset_bottom = -2.98701
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_qxbxr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GPU_freq" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 132.0
+offset_right = 226.0
+offset_bottom = 175.0
+text = "GPU freq"
+label_settings = SubResource("LabelSettings_dbl51")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="G_freq" type="Label" parent="Panel/GPU_freq"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.209
+anchor_right = 0.985
+anchor_bottom = 2.209
+offset_left = -2.0
+offset_top = 0.0129967
+offset_right = 0.00999451
+offset_bottom = 0.0129929
+label_settings = SubResource("LabelSettings_5m0ma")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="power_gpu" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 242.0
+offset_right = 205.0
+offset_bottom = 285.0
+text = "POWER"
+label_settings = SubResource("LabelSettings_1pf4k")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P_usage" type="Label" parent="Panel/power_gpu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.088
+anchor_top = 0.884
+anchor_right = 1.142
+anchor_bottom = 2.0
+offset_left = -0.0559988
+offset_top = -0.012001
+offset_right = -0.0460052
+offset_bottom = -5.0
+label_settings = SubResource("LabelSettings_a24q4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_6chov")
+
+[node name="capsul_progress" parent="TextureProgressBar" instance=ExtResource("1_sdkr6")]
+layout_mode = 1
+offset_left = 49.0
+offset_top = 1.0
+offset_right = 49.0
+offset_bottom = 1.0
+
+[node name="Label2" type="Label" parent="TextureProgressBar/capsul_progress"]
+clip_contents = true
+layout_mode = 0
+offset_left = 622.0
+offset_top = 329.0
+offset_right = 677.0
+offset_bottom = 368.0
+text = "75%"
+label_settings = SubResource("LabelSettings_0o51a")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label" type="Label" parent="TextureProgressBar/capsul_progress"]
+clip_contents = true
+layout_mode = 1
+offset_left = 608.0
+offset_top = 220.0
+offset_right = 702.0
+offset_bottom = 303.0
+text = "Vram
+usage"
+label_settings = SubResource("LabelSettings_v2xvt")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

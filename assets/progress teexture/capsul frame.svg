@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32.954372mm"
+   height="69.998108mm"
+   viewBox="0 0 32.954373 69.998108"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="capsul frame.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="32.954372"
+       height="69.998108"
+       id="page1"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-78.46818,-92.909159)">
+    <path
+       d="m 82.828019,93.411869 a 3.8574994,3.8574994 0 0 0 -3.857129,3.857646 v 61.277395 a 3.8574994,3.8574994 0 0 0 3.857129,3.85765 H 107.0622 a 3.8574994,3.8574994 0 0 0 3.85764,-3.85765 V 97.269515 a 3.8574994,3.8574994 0 0 0 -3.85764,-3.857646 z"
+       style="fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#4d3396;stroke-width:1.00542;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0.9;stroke-opacity:1"
+       id="path6"
+       inkscape:export-filename="capsul frame.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

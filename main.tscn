@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://g70ge85w4plu"]
+
+[ext_resource type="Script" uid="uid://dkdpb2pyynjhu" path="res://scripts/main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cqxjigctuqco3" path="res://scene/monitoring_page.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bd3grmovk3gjn" path="res://scene/pages_panel.tscn" id="3_h2yge"]
+[ext_resource type="Theme" uid="uid://xwsq6n7r3hrb" path="res://assets/themes/dark_theme.tres" id="3_lquwl"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(508, 510)
+size_flags_horizontal = 3
+script = ExtResource("1_ig7tw")
+metadata/_edit_vertical_guides_ = [603.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+color = Color(0.101961, 0.0980392, 0.184314, 1)
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.057
+anchor_bottom = 1.0
+offset_right = 0.559998
+split_offset = 6
+collapsed = true
+drag_area_highlight_in_editor = true
+
+[node name="pages_panel" parent="HSplitContainer" instance=ExtResource("3_h2yge")]
+top_level = true
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_lquwl")
+follow_focus = true
+draw_focus_border = true
+
+[node name="monitoring_page" parent="ScrollContainer" instance=ExtResource("3_1bvp3")]
+custom_minimum_size = Vector2(1920.95, 1627.98)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="box frame" parent="ScrollContainer/monitoring_page/2st row/circleprogress_CPU" index="0"]
+anchors_preset = -1
+anchor_left = 16.444
+anchor_top = 11.783
+anchor_right = 79.778
+anchor_bottom = 20.392
+offset_left = -1.996
+offset_top = 4.67996
+offset_right = 10.9979
+offset_bottom = -5.67999
+
+[editable path="ScrollContainer/monitoring_page"]
+[editable path="ScrollContainer/monitoring_page/top row/swap_usage"]
+[editable path="ScrollContainer/monitoring_page/top row/memory_usage"]
+[editable path="ScrollContainer/monitoring_page/2st row/circleprogress_CPU"]
+[editable path="ScrollContainer/monitoring_page/2st row/cpu_temp2"]
+[editable path="ScrollContainer/monitoring_page/2st row/cpu_temp"]
+[editable path="ScrollContainer/monitoring_page/2st row/vulkan"]
+[editable path="ScrollContainer/monitoring_page/3st row/info_system"]
+[editable path="ScrollContainer/monitoring_page/3st row/storage_monitor"]

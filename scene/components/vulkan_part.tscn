@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7lhhi0xouyq5"]
+
+[ext_resource type="Theme" uid="uid://xwsq6n7r3hrb" path="res://assets/themes/dark_theme.tres" id="1_q54jk"]
+
+[node name="vulkan" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_q54jk")
+
+[node name="radv" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 435.0
+offset_right = 1166.0
+offset_bottom = 665.0
+
+[node name="Label" type="Label" parent="radv"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.313
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.00999451
+grow_horizontal = 2
+grow_vertical = 2
+text = "RADV"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="amdvlk" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1187.0
+offset_top = 435.0
+offset_right = 1417.0
+offset_bottom = 665.0
+
+[node name="Label" type="Label" parent="amdvlk"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.313
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.00999451
+grow_horizontal = 2
+grow_vertical = 2
+text = "AMDVLK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="amdgpupro" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 5.75
+anchor_bottom = 5.75
+offset_left = 1435.0
+offset_top = 435.0
+offset_right = 1435.0
+offset_bottom = 435.0
+
+[node name="Label" type="Label" parent="amdgpupro"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.313
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.00999451
+grow_horizontal = 2
+grow_vertical = 2
+text = "amdgpupro"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="vlk status" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1663.0
+offset_top = 694.0
+offset_right = 1745.0
+offset_bottom = 1415.0
+rotation = 1.5708

@@ -1,0 +1,169 @@
+[gd_scene load_steps=13 format=3 uid="uid://cqxjigctuqco3"]
+
+[ext_resource type="PackedScene" uid="uid://b0xoe0eilbj4t" path="res://scene/components/circle progress_box.tscn" id="1_u8jh5"]
+[ext_resource type="PackedScene" uid="uid://c4r6wsgocihom" path="res://scene/components/fan_speed.tscn" id="2_4m4e7"]
+[ext_resource type="PackedScene" uid="uid://cy2anoo3vru" path="res://scene/components/vramusage_capsul.tscn" id="3_gnugl"]
+[ext_resource type="PackedScene" uid="uid://dnrqft5k8h23q" path="res://scene/components/circleprogress_cpu.tscn" id="4_vulsf"]
+[ext_resource type="PackedScene" uid="uid://nlkjwb5us51y" path="res://scene/components/swap_usage.tscn" id="5_nj58h"]
+[ext_resource type="PackedScene" uid="uid://cj0qejqx8w2j2" path="res://scene/components/memory_usage.tscn" id="6_7v5i8"]
+[ext_resource type="PackedScene" uid="uid://djaprartufca5" path="res://scene/components/cpu_temp.tscn" id="7_gnugl"]
+[ext_resource type="Theme" uid="uid://xwsq6n7r3hrb" path="res://assets/themes/dark_theme.tres" id="8_a4bva"]
+[ext_resource type="PackedScene" uid="uid://byphg08ysfxrb" path="res://scene/components/gpu_temp.tscn" id="8_vulsf"]
+[ext_resource type="PackedScene" uid="uid://b7lhhi0xouyq5" path="res://scene/components/vulkan_part.tscn" id="9_vulsf"]
+[ext_resource type="PackedScene" uid="uid://dsoggd73aueyi" path="res://scene/components/info_system.tscn" id="10_nj58h"]
+[ext_resource type="PackedScene" uid="uid://74dl8o7dampi" path="res://scene/components/storage_monitor.tscn" id="11_7v5i8"]
+
+[node name="monitoring_page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="top row" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.992
+anchor_bottom = 0.407
+offset_top = 8.0
+offset_right = 15.3599
+offset_bottom = 16.44
+
+[node name="circleprogress" parent="top row" instance=ExtResource("1_u8jh5")]
+layout_mode = 2
+
+[node name="box frame" parent="top row/circleprogress" index="0"]
+offset_right = 579.0
+
+[node name="fan_speed" parent="top row" instance=ExtResource("2_4m4e7")]
+layout_mode = 2
+
+[node name="vramusage_capsul" parent="top row" instance=ExtResource("3_gnugl")]
+layout_mode = 2
+
+[node name="swap_usage" parent="top row" instance=ExtResource("5_nj58h")]
+layout_mode = 2
+
+[node name="TextureProgressBar" parent="top row/swap_usage" index="0"]
+offset_left = 1667.0
+offset_top = 63.0
+offset_right = 1798.0
+offset_bottom = 328.0
+
+[node name="memory_usage" parent="top row" instance=ExtResource("6_7v5i8")]
+layout_mode = 2
+
+[node name="TextureProgressBar" parent="top row/memory_usage" index="0"]
+offset_left = 1451.0
+offset_top = 64.0
+offset_right = 1586.0
+offset_bottom = 329.0
+
+[node name="2st row" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="circleprogress_CPU" parent="2st row" instance=ExtResource("4_vulsf")]
+layout_mode = 2
+
+[node name="box frame" parent="2st row/circleprogress_CPU" index="0"]
+offset_left = 148.0
+offset_right = 731.0
+
+[node name="cpu_temp2" parent="2st row" instance=ExtResource("8_vulsf")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_a4bva")
+
+[node name="box_temp" parent="2st row/cpu_temp2" index="0"]
+offset_left = 775.0
+offset_top = 476.0
+offset_right = 1039.0
+offset_bottom = 628.0
+
+[node name="cpu_temp" parent="2st row" instance=ExtResource("7_gnugl")]
+layout_mode = 2
+
+[node name="box_temp" parent="2st row/cpu_temp" index="0"]
+layout_mode = 0
+offset_left = 757.0
+offset_top = 659.0
+offset_right = 1021.0
+offset_bottom = 811.0
+
+[node name="vulkan" parent="2st row" instance=ExtResource("9_vulsf")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="radv" parent="2st row/vulkan" index="0"]
+offset_left = 1063.0
+offset_top = 475.0
+offset_right = 1293.0
+offset_bottom = 705.0
+
+[node name="amdvlk" parent="2st row/vulkan" index="1"]
+offset_left = 1314.0
+offset_top = 475.0
+offset_right = 1544.0
+offset_bottom = 705.0
+
+[node name="amdgpupro" parent="2st row/vulkan" index="2"]
+offset_left = 1562.0
+offset_top = 475.0
+offset_right = 1729.5
+offset_bottom = 475.0
+
+[node name="vlk status" parent="2st row/vulkan" index="3"]
+offset_left = 1810.0
+offset_top = 734.0
+offset_right = 1892.0
+offset_bottom = 1475.0
+
+[node name="3st row" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 4.0
+
+[node name="info_system" parent="3st row" instance=ExtResource("10_nj58h")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="fetch_box" parent="3st row/info_system" index="0"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 875.0
+offset_right = 1037.0
+offset_bottom = 1513.0
+
+[node name="storage_monitor" parent="3st row" instance=ExtResource("11_7v5i8")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_a4bva")
+
+[node name="fetch_box" parent="3st row/storage_monitor" index="0"]
+offset_left = 1085.0
+offset_top = 875.0
+offset_right = 1832.0
+offset_bottom = 1513.0
+
+[editable path="top row/circleprogress"]
+[editable path="top row/vramusage_capsul"]
+[editable path="top row/swap_usage"]
+[editable path="top row/memory_usage"]
+[editable path="2st row/circleprogress_CPU"]
+[editable path="2st row/cpu_temp2"]
+[editable path="2st row/cpu_temp"]
+[editable path="2st row/vulkan"]
+[editable path="3st row/info_system"]
+[editable path="3st row/storage_monitor"]

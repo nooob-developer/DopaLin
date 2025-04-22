@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsoggd73aueyi"]
+
+[ext_resource type="Theme" uid="uid://xwsq6n7r3hrb" path="res://assets/themes/dark_theme.tres" id="1_i36gm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i36gm"]
+bg_color = Color(0.341176, 0.231373, 0.792157, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.301961, 0.2, 0.588235, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[node name="info_system" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="fetch_box" type="Panel" parent="."]
+offset_left = 161.0
+offset_top = 685.0
+offset_right = 1050.0
+offset_bottom = 1323.0
+theme = ExtResource("1_i36gm")
+theme_override_styles/panel = SubResource("StyleBoxFlat_i36gm")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0225byma0ib4"]
+
+[ext_resource type="PackedScene" uid="uid://b0xoe0eilbj4t" path="res://scene/components/circle progress_box.tscn" id="1_4ahk3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="circleprogress_GPU" parent="." instance=ExtResource("1_4ahk3")]
+layout_mode = 1
+offset_left = 994.0
+offset_top = 464.0
+offset_right = 994.0
+offset_bottom = 464.0

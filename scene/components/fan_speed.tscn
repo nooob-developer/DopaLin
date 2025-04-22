@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4r6wsgocihom"]
+
+[ext_resource type="Script" uid="uid://4yiarniim00v" path="res://scripts/component_script/fan_speed.gd" id="1_swbj3"]
+[ext_resource type="Theme" uid="uid://xwsq6n7r3hrb" path="res://assets/themes/dark_theme.tres" id="1_xobsj"]
+[ext_resource type="Texture2D" uid="uid://c6cre4vehthyc" path="res://assets/fan_icon.svg" id="2_f2re0"]
+[ext_resource type="FontFile" uid="uid://bj42x8oo5gjq" path="res://assets/fonts/Poppins-Black.ttf" id="4_mttwr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e8xpv"]
+font = ExtResource("4_mttwr")
+font_size = 30
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_swbj3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1082.0
+offset_top = 68.0
+offset_right = 1404.0
+offset_bottom = 407.0
+theme = ExtResource("1_xobsj")
+
+[node name="FanSpeedLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.323
+anchor_top = 0.802
+anchor_right = 0.733
+anchor_bottom = 0.962
+offset_left = -0.00600433
+offset_top = 0.121979
+offset_right = -0.0260162
+offset_bottom = -0.118011
+label_settings = SubResource("LabelSettings_e8xpv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1244, 215)
+rotation = 2.13105
+texture = ExtResource("2_f2re0")
+flip_v = true
+region_rect = Rect2(12.69, 0, 0, 0)

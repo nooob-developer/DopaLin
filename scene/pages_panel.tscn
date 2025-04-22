@@ -1,0 +1,79 @@
+[gd_scene load_steps=15 format=3 uid="uid://bd3grmovk3gjn"]
+
+[ext_resource type="Theme" uid="uid://xwsq6n7r3hrb" path="res://assets/themes/dark_theme.tres" id="1_2a62b"]
+[ext_resource type="Texture2D" uid="uid://bladxslrswuu" path="res://assets/icons/panel left/icons/dashboard off.png" id="1_7ex2u"]
+[ext_resource type="Texture2D" uid="uid://cp4yxxro7syt2" path="res://assets/icons/panel left/icons/performance off.png" id="2_iylj1"]
+[ext_resource type="Texture2D" uid="uid://4ocf88fiw7l2" path="res://assets/icons/panel left/icons/settings.png" id="3_5ucio"]
+[ext_resource type="Texture2D" uid="uid://bva6bwiut1w2a" path="res://assets/icons/panel left/icons/dashboard on.png" id="3_dilk2"]
+[ext_resource type="Texture2D" uid="uid://bqo7rajaoxlqd" path="res://assets/icons/panel left/icons/settings off.png" id="4_2a62b"]
+[ext_resource type="Texture2D" uid="uid://bagkri2mhfo4y" path="res://assets/icons/panel left/icons/performance on.png" id="5_bvkqj"]
+[ext_resource type="Texture2D" uid="uid://dfmjjn5i4tuko" path="res://assets/icons/panel left/icons/server.svg" id="5_lckea"]
+[ext_resource type="Texture2D" uid="uid://bcqssvqi8ul61" path="res://assets/icons/panel left/icons/server 0ff.png" id="6_0anl4"]
+[ext_resource type="Texture2D" uid="uid://bjhkwvoe0iaiw" path="res://assets/icons/panel left/icons/settings on.png" id="7_ifhve"]
+[ext_resource type="Texture2D" uid="uid://8p4cdibyrl4c" path="res://assets/icons/panel left/icons/trophy off.png" id="7_wm7i3"]
+[ext_resource type="Texture2D" uid="uid://8fdtiyohsdvp" path="res://assets/icons/panel left/icons/profile_icon.svg" id="8_wl16u"]
+[ext_resource type="Texture2D" uid="uid://cpmuodb2nwiyk" path="res://assets/icons/panel left/icons/server on.png" id="10_xs7bl"]
+[ext_resource type="Texture2D" uid="uid://brywdkfj1ioc4" path="res://assets/icons/panel left/icons/trophy on.png" id="13_p4gg8"]
+
+[node name="pages_panel" type="Panel"]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 110.0
+grow_vertical = 2
+theme = ExtResource("1_2a62b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_right = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dashboard" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("1_7ex2u")
+texture_pressed = ExtResource("3_dilk2")
+stretch_mode = 5
+
+[node name="overclock" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("2_iylj1")
+texture_pressed = ExtResource("5_bvkqj")
+stretch_mode = 5
+
+[node name="settings" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("3_5ucio")
+texture_pressed = ExtResource("7_ifhve")
+texture_disabled = ExtResource("4_2a62b")
+stretch_mode = 5
+
+[node name="server" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("5_lckea")
+texture_pressed = ExtResource("10_xs7bl")
+texture_disabled = ExtResource("6_0anl4")
+stretch_mode = 5
+
+[node name="leaderboard" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("7_wm7i3")
+texture_pressed = ExtResource("13_p4gg8")
+texture_disabled = ExtResource("7_wm7i3")
+stretch_mode = 5
+
+[node name="friends" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("8_wl16u")
+texture_disabled = ExtResource("7_wm7i3")
+stretch_mode = 5

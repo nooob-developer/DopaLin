@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://djaprartufca5"]
+
+[ext_resource type="Theme" uid="uid://xwsq6n7r3hrb" path="res://assets/themes/dark_theme.tres" id="1_ob6me"]
+[ext_resource type="FontFile" uid="uid://bj42x8oo5gjq" path="res://assets/fonts/Poppins-Black.ttf" id="2_5tmh1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k7ry6"]
+line_spacing = 6.49
+font = ExtResource("2_5tmh1")
+font_size = 60
+shadow_color = Color(0.253167, 0, 0.49, 0.807843)
+shadow_offset = Vector2(0.395, 6.345)
+
+[node name="cpu_temp" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="box_temp" type="Panel" parent="."]
+offset_left = 925.0
+offset_top = 515.0
+offset_right = 1052.0
+offset_bottom = 676.0
+theme = ExtResource("1_ob6me")
+
+[node name="CenterContainer" type="CenterContainer" parent="box_temp"]
+clip_contents = true
+custom_minimum_size = Vector2(127.58, 161.385)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.79
+offset_top = -80.6925
+offset_right = 63.79
+offset_bottom = 80.6925
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="box_temp/CenterContainer"]
+layout_mode = 2
+text = "56"
+label_settings = SubResource("LabelSettings_k7ry6")
+horizontal_alignment = 1
+vertical_alignment = 1

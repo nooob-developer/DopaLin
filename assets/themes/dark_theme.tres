@@ -1,0 +1,96 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://xwsq6n7r3hrb"]
+
+[ext_resource type="FontFile" uid="uid://bxgq2n58hnlxd" path="res://assets/fonts/Poppins-SemiBold.ttf" id="1_3ltnh"]
+
+[sub_resource type="StyleBoxFlat" id="6"]
+bg_color = Color(0.584314, 0.380392, 0.933333, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.278431, 0.188235, 0.541176, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="5"]
+bg_color = Color(0.2, 0.227451, 0.356863, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.341176, 0.231373, 0.792157, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="4"]
+bg_color = Color(0.584314, 0.380392, 0.933333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="2"]
+bg_color = Color(0.101961, 0.0980392, 0.184314, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.301961, 0.2, 0.588235, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0, 1, 0, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="3"]
+bg_color = Color(0.105882, 0.117647, 0.188235, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_or18g"]
+bg_color = Color(0.301961, 0.2, 0.588235, 1)
+shadow_color = Color(0, 1, 0, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="7"]
+bg_color = Color(0.129412, 0.145098, 0.239216, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.584314, 0.380392, 0.933333, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[resource]
+default_font = ExtResource("1_3ltnh")
+default_font_size = 26
+Button/styles/hover = SubResource("6")
+Button/styles/normal = SubResource("5")
+Button/styles/pressed = SubResource("4")
+Label/colors/font_color = Color(0.929412, 0.929412, 0.952941, 1)
+Label/fonts/font = ExtResource("1_3ltnh")
+Panel/styles/panel = SubResource("2")
+PanelContainer/styles/panel = SubResource("3")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_or18g")
+ProgressBar/styles/bg = SubResource("5")
+ProgressBar/styles/fg = SubResource("6")
+VScrollBar/styles/grabber = SubResource("6")
+VScrollBar/styles/grabber_highlight = SubResource("4")
+VScrollBar/styles/grabber_pressed = SubResource("4")
+VScrollBar/styles/scroll = SubResource("7")

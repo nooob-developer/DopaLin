@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj0qejqx8w2j2"]
+
+[ext_resource type="PackedScene" uid="uid://bkphxte5tho0d" path="res://scene/components/capsul_progress.tscn" id="1_avi10"]
+[ext_resource type="Script" uid="uid://b5nktubxwwthd" path="res://scripts/component_script/Memory.gd" id="2_vvexh"]
+
+[node name="memory_usage" instance=ExtResource("1_avi10")]
+script = ExtResource("2_vvexh")
+
+[node name="TextureProgressBar" parent="." index="0"]
+offset_left = 1454.0
+offset_top = 24.0
+offset_right = 1579.01
+offset_bottom = 289.0
+value = 0.0
+rounded = true
+
+[node name="Label" parent="TextureProgressBar" index="0"]
+grow_horizontal = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="TextureProgressBar" index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

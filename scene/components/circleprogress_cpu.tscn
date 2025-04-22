@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnrqft5k8h23q"]
+
+[ext_resource type="PackedScene" uid="uid://b0xoe0eilbj4t" path="res://scene/components/circle progress_box.tscn" id="1_kqm1j"]
+[ext_resource type="Theme" uid="uid://xwsq6n7r3hrb" path="res://assets/themes/dark_theme.tres" id="2_l38ba"]
+
+[node name="circleprogress_CPU" instance=ExtResource("1_kqm1j")]
+size_flags_horizontal = 3
+
+[node name="box frame" parent="." index="0"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 475.0
+offset_right = 749.0
+offset_bottom = 809.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="box frame" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.979
+anchor_bottom = 0.955
+offset_left = 380.0
+offset_top = 15.0
+offset_right = 0.242981
+offset_bottom = 0.0299988
+focus_mode = 2
+theme = ExtResource("2_l38ba")
+text = "CPU Voltage
+1.2v
+
+CPU freq
+5.5GHZ
+
+POWER 
+40 W"
+scroll_active = false
+autowrap_mode = 2
+tab_size = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+selection_enabled = true

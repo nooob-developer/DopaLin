@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://byphg08ysfxrb"]
+
+[ext_resource type="PackedScene" uid="uid://djaprartufca5" path="res://scene/components/cpu_temp.tscn" id="1_8q2og"]
+[ext_resource type="Script" uid="uid://dhwwgfnpux7l4" path="res://scripts/component_script/gpu_temp.gd" id="2_enqok"]
+
+[node name="gpu_temp" instance=ExtResource("1_8q2og")]
+script = ExtResource("2_enqok")
+
+[node name="box_temp" parent="." index="0"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 127.0
+offset_bottom = 161.0
+
+[node name="CenterContainer" parent="box_temp" index="0"]
+visible = true
+
+[node name="Label" parent="box_temp/CenterContainer" index="0"]
+visible = true
