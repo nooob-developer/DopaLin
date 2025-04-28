@@ -26,7 +26,6 @@ func _update_fan_speed():
 		angle += rotation_speed
 		fan_icon.rotation_degrees = fmod(angle, 360.0)
 
-# 🔍 تابع پیدا کردن کارت گرافیک اصلی
 func get_active_gpu_card_path() -> String:
 	var base_path = "/sys/class/drm/"
 	var dir = DirAccess.open(base_path)

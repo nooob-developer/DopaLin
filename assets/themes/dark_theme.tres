@@ -94,3 +94,4 @@ VScrollBar/styles/grabber = SubResource("6")
 VScrollBar/styles/grabber_highlight = SubResource("4")
 VScrollBar/styles/grabber_pressed = SubResource("4")
 VScrollBar/styles/scroll = SubResource("7")
+color_line/styles/line = null

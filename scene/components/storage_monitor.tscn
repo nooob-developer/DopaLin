@@ -7,4 +7,7 @@ offset_left = 1047.0
 offset_right = 1824.0
 
 [node name="fetch_box" parent="." index="0"]
-layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 889.0
+offset_bottom = 638.0

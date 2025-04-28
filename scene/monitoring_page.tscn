@@ -97,7 +97,6 @@ offset_bottom = 628.0
 layout_mode = 2
 
 [node name="box_temp" parent="2st row/cpu_temp" index="0"]
-layout_mode = 0
 offset_left = 757.0
 offset_top = 659.0
 offset_right = 1021.0
@@ -137,16 +136,15 @@ offset_right = 4.0
 
 [node name="info_system" parent="3st row" instance=ExtResource("10_nj58h")]
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="fetch_box" parent="3st row/info_system" index="0"]
-layout_mode = 0
-offset_left = 148.0
-offset_top = 875.0
-offset_right = 1037.0
-offset_bottom = 1513.0
+offset_left = 149.0
+offset_top = 851.0
+offset_right = 1052.0
+offset_bottom = 1489.0
 
 [node name="storage_monitor" parent="3st row" instance=ExtResource("11_7v5i8")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("8_a4bva")

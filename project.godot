@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="hwg"
+config/name="DopaLin"
 run/main_scene="uid://g70ge85w4plu"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -27,7 +27,11 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/copy_context_ai/plugin.cfg", "res://addons/copy_files_on_export/plugin.cfg", "res://addons/inspector-category-filter/plugin.cfg")
+enabled=PackedStringArray("res://addons/inspector-category-filter/plugin.cfg")
+
+[gui]
+
+theme/name="Dopal"
 
 [rendering]
 

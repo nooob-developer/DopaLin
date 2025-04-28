@@ -1,6 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsoggd73aueyi"]
+[gd_scene load_steps=15 format=3 uid="uid://dsoggd73aueyi"]
 
 [ext_resource type="Theme" uid="uid://xwsq6n7r3hrb" path="res://assets/themes/dark_theme.tres" id="1_i36gm"]
+[ext_resource type="Texture2D" uid="uid://hlobxbdvjjdp" path="res://assets/icons/monitorng_page/main_board.png" id="2_hgmq6"]
+[ext_resource type="Texture2D" uid="uid://bcb1iled4ravu" path="res://assets/icons/monitorng_page/cpu.png" id="3_aycxw"]
+[ext_resource type="Texture2D" uid="uid://dt62dwkyq62gy" path="res://assets/icons/monitorng_page/strokes.png" id="3_f5l1e"]
+[ext_resource type="Texture2D" uid="uid://cb4wqjymio1m4" path="res://assets/icons/monitorng_page/cpu_architecture.png" id="4_5oiuy"]
+[ext_resource type="FontFile" uid="uid://cidvectj6geye" path="res://assets/fonts/Poppins-Bold.ttf" id="4_ckxnu"]
+[ext_resource type="LabelSettings" uid="uid://b6f440dx5vaj3" path="res://assets/themes/text_info_system.tres" id="5_aftyo"]
+[ext_resource type="Texture2D" uid="uid://dprb8qp27ud7f" path="res://assets/icons/monitorng_page/cpu_freqouncy.png" id="5_wsevw"]
+[ext_resource type="Texture2D" uid="uid://c3bkfvoerhnqh" path="res://assets/icons/monitorng_page/gpu_model.png" id="8_aftyo"]
+[ext_resource type="Texture2D" uid="uid://coryqn4i2qykm" path="res://assets/icons/monitorng_page/gpu_architecture.png" id="9_lqcba"]
+[ext_resource type="Texture2D" uid="uid://bwjc5g8abq8vd" path="res://assets/icons/monitorng_page/GPU_freqouncy.png" id="10_lskhq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i36gm"]
 bg_color = Color(0.341176, 0.231373, 0.792157, 1)
@@ -14,6 +24,14 @@ corner_radius_top_right = 18
 corner_radius_bottom_right = 18
 corner_radius_bottom_left = 18
 
+[sub_resource type="LabelSettings" id="LabelSettings_ckxnu"]
+font = ExtResource("4_ckxnu")
+font_size = 17
+
+[sub_resource type="LabelSettings" id="LabelSettings_aftyo"]
+font = ExtResource("4_ckxnu")
+font_size = 17
+
 [node name="info_system" type="Control"]
 layout_mode = 3
 anchors_preset = 0
@@ -21,9 +39,306 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="fetch_box" type="Panel" parent="."]
+layout_mode = 0
 offset_left = 161.0
 offset_top = 685.0
 offset_right = 1050.0
 offset_bottom = 1323.0
 theme = ExtResource("1_i36gm")
 theme_override_styles/panel = SubResource("StyleBoxFlat_i36gm")
+
+[node name="hbox" type="HBoxContainer" parent="fetch_box"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.046
+anchor_top = 0.041
+anchor_right = 0.938
+anchor_bottom = 1.0
+offset_left = 3.606
+offset_top = -0.158001
+offset_right = 23.188
+offset_bottom = -19.935
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer_right" type="VBoxContainer" parent="fetch_box/hbox"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="fetch_box/hbox/VBoxContainer_right"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Motherboard_icon" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer"]
+texture_filter = 4
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_hgmq6")
+stretch_mode = 5
+
+[node name="space_line" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer/Motherboard_icon"]
+custom_minimum_size = Vector2(54.78, 0)
+layout_mode = 2
+offset_left = 59.0
+offset_top = 53.0
+offset_right = 209.0
+offset_bottom = 64.0
+size_flags_vertical = 3
+theme = ExtResource("1_i36gm")
+texture = ExtResource("3_f5l1e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="manfacturer" type="Label" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer"]
+texture_filter = 6
+layout_mode = 2
+size_flags_horizontal = 3
+text = "  Manufacturer"
+label_settings = ExtResource("5_aftyo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="fetch_box/hbox/VBoxContainer_right"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="cpu_icon" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer2"]
+texture_filter = 4
+layout_mode = 2
+texture = ExtResource("3_aycxw")
+stretch_mode = 5
+
+[node name="space_line" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer2/cpu_icon"]
+custom_minimum_size = Vector2(54.78, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.109
+offset_left = 51.0
+offset_top = 53.0
+offset_right = 158.986
+offset_bottom = 64.0
+size_flags_vertical = 3
+theme = ExtResource("1_i36gm")
+texture = ExtResource("3_f5l1e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="cpu_model" type="Label" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "CPU MODEL "
+label_settings = ExtResource("5_aftyo")
+horizontal_alignment = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="fetch_box/hbox/VBoxContainer_right"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="cpu_arch" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer3"]
+texture_filter = 4
+layout_mode = 2
+texture = ExtResource("4_5oiuy")
+stretch_mode = 5
+
+[node name="space_line" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer3/cpu_arch"]
+custom_minimum_size = Vector2(54.78, 0)
+layout_mode = 0
+offset_left = 57.0
+offset_top = 53.0
+offset_right = 207.0
+offset_bottom = 64.0
+size_flags_vertical = 3
+theme = ExtResource("1_i36gm")
+texture = ExtResource("3_f5l1e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="cpu_architecture" type="Label" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("4_ckxnu")
+theme_override_font_sizes/font_size = 17
+text = "  CPU architecture"
+label_settings = SubResource("LabelSettings_ckxnu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="fetch_box/hbox/VBoxContainer_right"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="cpu_freq" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer4"]
+texture_filter = 4
+layout_mode = 2
+texture = ExtResource("5_wsevw")
+stretch_mode = 5
+
+[node name="space_line" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer4/cpu_freq"]
+custom_minimum_size = Vector2(54.78, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.109
+offset_left = 54.0
+offset_top = 53.0
+offset_right = 201.986
+offset_bottom = 64.0
+size_flags_vertical = 3
+theme = ExtResource("1_i36gm")
+texture = ExtResource("3_f5l1e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="cpu_freqouncy" type="Label" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "CPU freqouncy"
+label_settings = ExtResource("5_aftyo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="fetch_box/hbox/VBoxContainer_right"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="gpu_icon" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("8_aftyo")
+stretch_mode = 5
+
+[node name="space_line" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer5/gpu_icon"]
+custom_minimum_size = Vector2(54.78, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.109
+offset_left = 51.0
+offset_top = 53.0
+offset_right = 161.986
+offset_bottom = 64.0
+size_flags_vertical = 3
+theme = ExtResource("1_i36gm")
+texture = ExtResource("3_f5l1e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="gpu_model" type="Label" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "CPU MODEL"
+label_settings = ExtResource("5_aftyo")
+horizontal_alignment = 3
+vertical_alignment = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="fetch_box/hbox/VBoxContainer_right"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="gpu_arch" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer6"]
+layout_mode = 2
+texture = ExtResource("9_lqcba")
+stretch_mode = 5
+
+[node name="space_line" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer6/gpu_arch"]
+custom_minimum_size = Vector2(54.78, 0)
+layout_mode = 0
+offset_left = 57.0
+offset_top = 53.0
+offset_right = 207.0
+offset_bottom = 64.0
+size_flags_vertical = 3
+theme = ExtResource("1_i36gm")
+texture = ExtResource("3_f5l1e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="gpu_architecture" type="Label" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("4_ckxnu")
+theme_override_font_sizes/font_size = 17
+text = "  GPU architecture"
+label_settings = SubResource("LabelSettings_aftyo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="fetch_box/hbox/VBoxContainer_right"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="gpu_ferq" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer7"]
+layout_mode = 2
+texture = ExtResource("10_lskhq")
+stretch_mode = 5
+
+[node name="space_line" type="TextureRect" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer7/gpu_ferq"]
+custom_minimum_size = Vector2(54.78, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.109
+offset_left = 54.0
+offset_top = 53.0
+offset_right = 201.986
+offset_bottom = 64.0
+size_flags_vertical = 3
+theme = ExtResource("1_i36gm")
+texture = ExtResource("3_f5l1e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="gpu_freqouncy" type="Label" parent="fetch_box/hbox/VBoxContainer_right/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "GPU freqouncy"
+label_settings = ExtResource("5_aftyo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer_left" type="VBoxContainer" parent="fetch_box/hbox"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 3
+
+[node name="mb_name" type="Label" parent="fetch_box/hbox/VBoxContainer_left"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "fffffffffff"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cpu_name" type="Label" parent="fetch_box/hbox/VBoxContainer_left"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "fffffffffff"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cpu_arch" type="Label" parent="fetch_box/hbox/VBoxContainer_left"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "fffffffffff"
+vertical_alignment = 1
+
+[node name="cpu_freq" type="Label" parent="fetch_box/hbox/VBoxContainer_left"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "fffffffffff"
+vertical_alignment = 1
+
+[node name="gpu_model" type="Label" parent="fetch_box/hbox/VBoxContainer_left"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "fffffffffff"
+vertical_alignment = 1
+
+[node name="gpu_arch" type="Label" parent="fetch_box/hbox/VBoxContainer_left"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "fffffffffff"
+vertical_alignment = 1
+
+[node name="gpu_freq" type="Label" parent="fetch_box/hbox/VBoxContainer_left"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "fffffffffff"
+vertical_alignment = 1

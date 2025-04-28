@@ -35,7 +35,7 @@ func _update_gpu_info():
 	_update_mem_freq()
 	_update_power()
 
-# ✅ VRAM USAGE
+# VRAM USAGE
 func _update_vram():
 	var result := []
 	var status = OS.execute("bash", ["-c", "cat /sys/class/drm/card0/device/mem_info_vram_used"], result)
@@ -50,7 +50,7 @@ func _update_vram():
 			vram_bar.value = percent
 			vram_label.text = str("%.1f" % percent) + " %"
 
-# ✅ GPU FREQ
+# GPU FREQ
 func _update_gpu_freq():
 	var result := []
 	var status = OS.execute("bash", ["-c", "cat /sys/class/drm/card0/device/pp_dpm_sclk | grep '*'"], result)
@@ -63,7 +63,7 @@ func _update_gpu_freq():
 				gpu_freq_info.text = p
 				break
 
-# ✅ MEMORY FREQ (ممکنه نیاز به radeontop یا sensors داشته باشه)
+#  MEMORY FREQ 
 func _update_mem_freq():
 	var result := []
 	var status = OS.execute("bash", ["-c", "cat /sys/class/drm/card0/device/pp_dpm_mclk | grep '*'"], result)
@@ -75,7 +75,7 @@ func _update_mem_freq():
 				mem_freq_info.text = p
 				break
 
-# ✅ POWER USAGE
+#  POWER USAGE
 func _update_power():
 	var result := []
 	var status = OS.execute("bash", ["-c", "cat /sys/class/drm/card0/device/hwmon/hwmon*/power1_average"], result)
